@@ -24,7 +24,7 @@ public class Asteroid : MonoBehaviour
             rb2d.AddForce(force, ForceMode2D.Impulse);
         }
     }
-
+    // Github commit test
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
         // Don't run code past this check if not a bullet
