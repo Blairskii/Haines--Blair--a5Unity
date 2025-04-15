@@ -10,11 +10,13 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreDisplay;
     public TMP_Text livesDisplay;
     public TMP_Text gameOverDisplay;
+    public AsteroidSpawner asteroidSpawner;
 
     public void AddScore()
     {
         score++;
         UpdateScoreDisplay();
+        asteroidSpawner.CheckSpawnAsteroid(score);
     }
 
     public void RemoveLife()
