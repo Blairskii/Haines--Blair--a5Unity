@@ -62,6 +62,7 @@ public class Asteroid : MonoBehaviour
         // Destroy bullet, then this asteroid
         Destroy(collider2D.gameObject);
         Destroy(this.gameObject);
+        CameraShake.Instance.TriggerShake(0.1f, 0.1f);
     }
 
     public void MoveTowardsCentre()

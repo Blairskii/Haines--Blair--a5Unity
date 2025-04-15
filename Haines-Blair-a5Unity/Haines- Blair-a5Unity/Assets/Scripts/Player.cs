@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         Asteroid asteroid = collider2D.GetComponent<Asteroid>();
         if (asteroid == null)
             return;
-
+        CameraShake.Instance.TriggerShake(0.2f, 0.3f);
         // Don't run code past this check if not an asteroid
         bool isAsteroid = collider2D.gameObject.CompareTag("Asteroid");
         if (!isAsteroid)
