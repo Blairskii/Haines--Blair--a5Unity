@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
             audioSource.clip = backgroundMusic;// Assign the background music clip
             audioSource.loop = true;// Loop the audio
             audioSource.playOnAwake = false;// Don't play on awake
-            audioSource.volume = 0.5f;// Set volume (adjust as needed)
+            audioSource.volume = 0.3f;// Set volume (adjust as needed)
 
             audioSource.Play();// Start playing the background music
         }
