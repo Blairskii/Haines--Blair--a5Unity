@@ -26,7 +26,7 @@ public class PlayerThrust : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))// Check if Space key is pressed
+        if (Input.GetKey(KeyCode.W))// Check if Space key is pressed
         {
             rb.AddForce(transform.up * thrustForce);// Apply thrust force in the direction the player is facing
 

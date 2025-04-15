@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         rb2d.MoveRotation(rotationAngle + transform.rotation.eulerAngles.z);
 
         // Add force to player
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             // Cap movement speed
             bool canApplyVelocity = rb2d.linearVelocity.magnitude < maxVelocity;
@@ -58,9 +58,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
-        //Asteroid asteroid = collider2D.GetComponent<Asteroid>();
-        //if (asteroid == null)
-        //    return;
+        Asteroid asteroid = collider2D.GetComponent<Asteroid>();
+        if (asteroid == null)
+            return;
 
         // Don't run code past this check if not an asteroid
         bool isAsteroid = collider2D.gameObject.CompareTag("Asteroid");
