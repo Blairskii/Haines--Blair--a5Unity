@@ -8,6 +8,7 @@ public class Asteroid : MonoBehaviour
     public int subdivisionLevel = 0;
     public GameObject[] asteroids;
     public bool RandomizeStartVelocity = true;
+    public AudioClip destroySound;
 
     void Start()
     {
@@ -51,7 +52,10 @@ public class Asteroid : MonoBehaviour
                 asteroidRB2D.linearVelocity = variance * rb2d.linearVelocity;
             }
         }
-
+        if (destroySound != null)
+        {
+            AudioSource.PlayClipAtPoint(destroySound, transform.position);
+        }
         // Add score
         GameObject.Find("GameManager").GetComponent<GameManager>().AddScore();
 

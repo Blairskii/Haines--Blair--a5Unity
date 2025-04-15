@@ -111,6 +111,7 @@ MonoBehaviour:
   - {fileID: 5020878972912135297, guid: 06bec907e174fe7478acb683022d0277, type: 3}
   - {fileID: 5020878972912135297, guid: 278247017d6308548aa2c6ab83c4a5cf, type: 3}
   RandomizeStartVelocity: 1
+  destroySound: {fileID: 8300000, guid: 3505f0ebe8f150f42a20bc5a1424e117, type: 3}
 --- !u!58 &1314849252065193309
 CircleCollider2D:
   m_ObjectHideFlags: 0
